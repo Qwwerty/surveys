@@ -7,7 +7,7 @@ export default (app: Express): void => {
   app.use('/api', router)
   const routesPath = path.join(__dirname, '..', 'routes')
   readdirSync(routesPath).map(async file => {
-    if (!file.includes('.test.')) {
+    if (!file.endsWith('.map') && !file.includes('.test.')) {
       (await import(`../routes/${file}`)).default(router)
     }
   })
