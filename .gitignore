@@ -1,6 +1,7 @@
 .idea
 
 data
+!src/data
 node_modules
 dist
 coverage
