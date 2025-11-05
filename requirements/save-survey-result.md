@@ -1,21 +1,21 @@
-# Responder enquete
+# Answer Survey
 
-> ## Caso de sucesso
+> ## Success Case
 
-1. ⛔️ Recebe uma requisição do tipo **PUT** na rota **/api/surveys/{survey_id}/results**
-2. ⛔️ Valida se a requisição foi feita por um **usuário**
-3. ⛔️ Valida o parâmetro **survey_id**
-4. ⛔️ Valida se o campo **answer** é uma resposta válida
-5. ⛔️ **Cria** um resultado de enquete com os dados fornecidos caso não tenha um registro
-6. ⛔️ **Atualiza** um resultado de enquete com os dados fornecidos caso já tenha um registro
-7. ⛔️ Retorna **200** com os dados do resultado da enquete
+1. ⛔️ Receives a **PUT** request at the **/api/surveys/{survey_id}/results** route  
+2. ⛔️ Validates that the request was made by a **user**  
+3. ⛔️ Validates the **survey_id** parameter  
+4. ⛔️ Validates that the **answer** field contains a valid response  
+5. ⛔️ **Creates** a survey result with the provided data if no record exists  
+6. ⛔️ **Updates** the survey result with the provided data if a record already exists  
+7. ⛔️ Returns **200** with the survey result data
 
-> ## Exceções
+> ## Exceptions
 
-1. ⛔️ Retorna erro **404** se a API não existir
-2. ⛔️ Retorna erro **403** se não for um usuário
-3. ⛔️ Retorna erro **403** se o survey_id passado na URL for inválido
-4. ⛔️ Retorna erro **403** se a resposta enviada pelo client for uma resposta inválida
-5. ⛔️ Retorna erro **500** se der erro ao tentar criar o resultado da enquete
-6. ⛔️ Retorna erro **500** se der erro ao tentar atualizar o resultado da enquete
-7. ⛔️ Retorna erro **500** se der erro ao tentar carregar a enquete
+1. ⛔️ Returns **404** error if the API endpoint does not exist  
+2. ⛔️ Returns **403** error if the requester is not a valid user  
+3. ⛔️ Returns **403** error if the **survey_id** provided in the URL is invalid  
+4. ⛔️ Returns **403** error if the **answer** provided by the client is invalid  
+5. ⛔️ Returns **500** error if an error occurs while creating the survey result  
+6. ⛔️ Returns **500** error if an error occurs while updating the survey result  
+7. ⛔️ Returns **500** error if an error occurs while loading the survey

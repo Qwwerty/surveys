@@ -1,15 +1,15 @@
 # **Clean Node API**
 
-> ## APIs construídas no treinamento
+> ## APIs
 
-1. [Cadastro](./requirements/signup.md)
+1. [Signup](./requirements/signup.md)
 2. [Login](./requirements/login.md)
-3. [Criar enquete](./requirements/add-survey.md)
-4. [Listar enquetes](./requirements/load-surveys.md)
-5. [Responder enquete](./requirements/save-survey-result.md)
-6. [Resultado da enquete](./requirements/load-survey-result.md)
+3. [Create survey](./requirements/add-survey.md)
+4. [List surveys](./requirements/load-surveys.md)
+5. [Answer survey](./requirements/save-survey-result.md)
+6. [Survey results](./requirements/load-survey-result.md)
 
-> ## Princípios
+> ## Principles
 
 * Single Responsibility Principle (SRP)
 * Open Closed Principle (OCP)
@@ -36,7 +36,7 @@
 * Builder
 * Singleton
 
-> ## Metodologias e Designs
+> ## Methodologies and Design Patterns
 
 * TDD
 * Clean Architecture
@@ -50,7 +50,7 @@
 * Continuous Delivery
 * Continuous Deployment
 
-> ## Bibliotecas e Ferramentas
+> ## Libraries and Tools
 
 * NPM
 * Typescript
@@ -87,20 +87,20 @@
 * Bson ObjectId
 * Apollo Server Integration Testing
 
-> ## Features do Node
+> ## Node Features
 
-* Documentação de API com Swagger
-* API Rest com Express
-* GraphQL com Apollo Server
-* Log de Erro
-* Segurança (Hashing, Encryption e Encoding)
+* API documentation with Swagger
+* REST API with Express
+* GraphQL with Apollo Server
+* Error logging
+* Security (Hashing, Encryption and Encoding)
 * CORS
 * Middlewares
-* Nível de Acesso nas Rotas (Admin, User e Anônimo)
-* Deploy no Heroku
-* Servir Arquivos Estáticos
+* Route access levels (Admin, User and Anonymous)
+* Deployment on Heroku
+* Serving static files
 
-> ## Features do GraphQL
+> ## GraphQL Features
 
 * Types
 * Queries
@@ -110,10 +110,10 @@
 * Scalars
 * Plugins
 
-> ## Features do Git
+> ## Git Features
 
 * Alias
-* Log Personalizado
+* Custom log
 * Branch
 * Reset
 * Amend
@@ -122,49 +122,40 @@
 * Rebase
 * Merge
 
-> ## Features do Typescript
+> ## TypeScript Features
 
-* POO Avançado
+* Advanced OOP
 * Interface
-* TypeAlias
+* Type Alias
 * Namespace
 * Utility Types
-* Modularização de Paths
-* Configurações
+* Path Modularization
+* Configurations
 * Build
 * Deploy
-* Uso de Breakpoints
+* Using Breakpoints
 
-> ## Features do GraphQL
+> ## Testing Features
 
-* Resolvers
-* Type Definitions
-* Directives
-* Scalars
-* Plugins
-* Error Handling
-
-> ## Features de Testes
-
-* Testes Unitários
-* Testes de Integração (API Rest & GraphQL)
-* Cobertura de Testes
+* Unit Tests
+* Integration Tests (REST API & GraphQL)
+* Test Coverage
 * Test Doubles
 * Mocks
 * Stubs
 * Spies
 * Fakes
 
-> ## Features do MongoDb
+> ## MongoDb Features
 
-* Connect e Reconnect
+* Connect and Reconnect
 * Collections
-* InsertOne e InserMany
-* Find, FindOne e FindOneAndUpdate
+* InsertOne and InsertMany
+* Find, FindOne and FindOneAndUpdate
 * DeleteMany
 * UpdateOne
 * Aggregation (Match, Group, Unwind, Lookup, AddFields, Project, Sort)
 * ObjectId
-* Upsert e ReturnOriginal
+* Upsert and ReturnOriginal
 * Push, Divide, Multiply, ArrayElemAt, Cond, Sum
 * Filter, Map, Reduce, MergeObjects, ConcatArrays
