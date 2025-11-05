@@ -3,7 +3,7 @@
 > ## Caso de sucesso
 
 1. ✅ Recebe uma requisição do tipo **POST** na rota **/api/surveys**
-2. ⛔️ Valida se a requisição foi feita por um **admin**
+2. ✅ Valida se a requisição foi feita por um **admin**
 3. ✅ Valida dados obrigatórios **question** e **answers**
 4. ✅ **Cria** uma enquete com os dados fornecidos
 5. ✅ Retorna **204**, sem dados
