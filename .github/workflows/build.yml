@@ -23,7 +23,4 @@ jobs:
         run: npx eslint 'src/**'
 
       - name: Run tests
-        run: npm run test:coveralls
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@v2
+        run: cat ./coverage/lcov.info | npx coveralls
