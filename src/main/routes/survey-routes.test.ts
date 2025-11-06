@@ -24,7 +24,7 @@ describe('Survey Routes', () => {
     await accountCollection.deleteMany({})
   })
 
-  describe('GET /surveys', () => {
+  describe('POST /surveys', () => {
     test('Should return 403 on add survey without accessToken', async () => {
       await request(app)
         .post('/api/surveys')
@@ -73,6 +73,35 @@ describe('Survey Routes', () => {
       await request(app)
         .get('/api/surveys')
         .expect(403)
+    })
+
+    test('Should return 200 on load surveys with valid accessToken', async () => {
+      const res = await accountCollection.insertOne({
+        name: 'Rhalf',
+        email: 'rhalfsouza@hotmail.com',
+        password: '123'
+      })
+      const id = res.insertedId.toHexString()
+      const accessToken = sign({ id }, env.jwtSecret)
+      await accountCollection.updateOne({
+        _id: res.insertedId
+      }, {
+        $set: {
+          accessToken
+        }
+      })
+      await surveyCollection.insertMany([{
+        question: 'any_question',
+        answers: [
+          { image: 'any_image', answer: 'any_answer' },
+          { answer: 'other_answer' }
+        ],
+        date: new Date()
+      }])
+      await request(app)
+        .get('/api/surveys')
+        .set('x-access-token', accessToken)
+        .expect(200)
     })
   })
 })
