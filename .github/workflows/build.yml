@@ -22,5 +22,9 @@ jobs:
       - name: Eslint check
         run: npx eslint 'src/**'
 
-      - name: Run tests
-        run: cat ./coverage/lcov.info | npx coveralls
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: ./coverage/lcov.info
+          coveralls-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
