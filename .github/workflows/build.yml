@@ -22,6 +22,9 @@ jobs:
       - name: Eslint check
         run: npx eslint 'src/**'
 
+      - name: Run tests with coverage
+        run: npm run test:coveralls
+
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
         with:
