@@ -14,6 +14,7 @@
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
+    "test:coveralls": "npm test -- --coverage && coveralls < coverage/lcov.info",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi"
   },
   "keywords": [],
@@ -31,6 +32,7 @@
     "@types/supertest": "^6.0.3",
     "@types/validator": "^13.15.3",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "coveralls": "^3.1.1",
     "eslint": "^7.32.0",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-import": "^2.24.2",
@@ -53,5 +55,8 @@
     "mongodb": "^6.16.0",
     "nodemon": "^3.1.10",
     "validator": "^13.15.15"
+  },
+  "engines": {
+    "node": "20"
   }
 }
