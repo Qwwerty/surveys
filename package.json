@@ -14,7 +14,6 @@
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "test:coveralls": "npm test -- --coverage && coveralls < coverage/lcov.info",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi"
   },
   "keywords": [],
