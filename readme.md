@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/Qwwerty/surveys/badge.svg?branch=master)](https://coveralls.io/github/Qwwerty/surveys?branch=master)
+
 # **Clean Node API**
 
 > ## APIs
