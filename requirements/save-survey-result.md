@@ -18,4 +18,4 @@
 4. ⛔️ Returns **403** error if the **answer** provided by the client is invalid  
 5. ⛔️ Returns **500** error if an error occurs while creating the survey result  
 6. ⛔️ Returns **500** error if an error occurs while updating the survey result  
-7. ⛔️ Returns **500** error if an error occurs while loading the survey
+7. ✅ Returns **500** error if an error occurs while loading the survey
