@@ -1,12 +1,23 @@
-export const signUpPath = {
-  post: {
-    tags: ['Login'],
-    summary: 'API for user registration',
+export const surveypResultPath = {
+  put: {
+    security: [{
+      apiKeyAuth: []
+    }],
+    tags: ['Survey'],
+    summary: 'API for answer a survey',
+    parameters: [{
+      in: 'path',
+      name: 'surveyId',
+      required: true,
+      schema: {
+        type: 'string'
+      }
+    }],
     requestBody: {
       content: {
         'application/json': {
           schema: {
-            $ref: '#/schemas/signUpParams'
+            $ref: '#/schemas/saveSurveyParams'
           }
         }
       }
@@ -17,13 +28,10 @@ export const signUpPath = {
         content: {
           'application/json': {
             schema: {
-              $ref: '#/schemas/account'
+              $ref: '#/schemas/surveyResult'
             }
           }
         }
-      },
-      400: {
-        $ref: '#/components/badRequest'
       },
       403: {
         $ref: '#/components/forbidden'
