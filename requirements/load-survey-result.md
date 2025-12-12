@@ -10,4 +10,4 @@
 
 1. ⛔️ Return **404** error if the API endpoint does not exist
 2. ⛔️ Return **403** if the requester is not a valid user
-3. ⛔️ Return **500** if an error occurs while retrvieving the survey result
+3. ✅ Return **500** if an error occurs while retrvieving the survey result
