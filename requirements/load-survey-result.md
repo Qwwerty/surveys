@@ -4,7 +4,7 @@
 
 1. ✅ Receive a **GET**  request at the **/api/surveys/{survey_id}/results** route
 2. ✅ Validates that the request was made by a **user**
-3. ⛔️ Returns *200** with the survey result data
+3. ✅ Returns *200** with the survey result data
 
 > ## Exceptions
 
